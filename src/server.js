@@ -5,6 +5,8 @@ const {
     ObjectID
 } = require('mongodb');
 
+const port = process.env.PORT || 3000;
+
 const {
     authenticate
 } = require('../middleware/authenticate');
@@ -155,4 +157,4 @@ app.post('/users/login', (req, res) => {
     });
 });
 
-app.listen('3000');
+app.listen(port);
